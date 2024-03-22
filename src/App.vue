@@ -56,9 +56,9 @@ import { useRouter } from 'vue-router'
 import { ElScrollbar, ElConfigProvider } from 'element-plus'
 import zhCn from "element-plus/es/locale/lang/zh-cn"
 
-const repoLink = 'https://roim.app'
-const repoName = 'roim-picx'
-const appName = 'PICX'
+const repoLink = 'https://www.aistore.com'
+const repoName = 'AiStoreX'
+const appName = 'AiStoreX'
 
 document.title = appName
 
