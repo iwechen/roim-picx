@@ -3,7 +3,7 @@ const supportFile = 'image/png,image/jpeg,image/gif,image/webp,image/jpg,image/x
 
 // 字符串编码
 export function randomString(value: number) {
-    let baseStr = 'Aa0Bb1Cc2Dd3Ee4Ff5Gg6Hh7Ii8Jj9KkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
+    let baseStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
     const chars = baseStr.split('');
     let maxPos = baseStr.length;
     const uuid = [];
@@ -12,6 +12,10 @@ export function randomString(value: number) {
         let mod = q % maxPos;
         q = (q - mod) / maxPos;
         uuid.push(chars[mod]);
+    }
+    // 增加字符串长度至16个字符
+    while (uuid.length < 16) {
+        uuid.push(chars[Math.floor(Math.random() * maxPos)]);
     }
     return uuid.join('');
 }
