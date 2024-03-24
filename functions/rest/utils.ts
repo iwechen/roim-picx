@@ -13,8 +13,8 @@ export function randomString(value: number) {
         q = (q - mod) / maxPos;
         uuid.push(chars[mod]);
     }
-    // 增加字符串长度至16个字符
-    while (uuid.length < 16) {
+    // 增加字符串长度至32个字符
+    while (uuid.length < 32) {
         uuid.push(chars[Math.floor(Math.random() * maxPos)]);
     }
     return uuid.join('');
